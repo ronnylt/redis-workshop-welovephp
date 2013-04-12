@@ -1,0 +1,19 @@
+{
+    "name": "ronnylt/redis-workshop-welovephp",
+    "authors": [
+        {
+            "name": "ronnylt",
+            "email": "hi@ronny.lt"
+        }
+    ],
+    "require": {
+        "predis/predis": "~0.8.3",
+        "doctrine/dbal": "2.3.2"
+    },
+
+    "autoload": {
+        "psr-0" : {
+            "WeLovePhp\\" : "src/"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+SADD fav:1 123
+SADD fav:1 345
+SADD fav:2 123
+
+SADD visits:1h:123 1
+SADD visits:1h:123 2
+SADD visits:1h:123 3
+
+SADD visits:1h:345 1
