@@ -1,0 +1,96 @@
+info
+
+
+set event:name WeLovePHP
+set event:date 2013-04-13
+get event:name
+get event:date
+del event:name
+del event:date
+
+
+incr attendees
+incr attendees
+get attendees
+incrby attendees 5
+get attendees
+
+
+keys *
+
+
+setnx event:started 15:00
+setnx event:started 15:00
+getnx event:started
+del event:started
+setnx event:started 15:00
+
+
+keys * 
+
+expire event:locked 1
+expire event:locked 10800
+ttl event:locked
+
+
+rpush users adan
+rpush users marcos
+rpush users javier
+rpush users manu
+lpsuh users gonzalo
+
+lrange users 0 -1
+
+lpop users
+rpop users
+llen users
+
+
+
+sadd superpowers vim
+sadd superpowers awk
+sadd superpowers top
+sadd superpowers emacs
+
+srem superpowers top
+
+sismember superpowers ls
+sismember superpowers vim
+
+smembers superpowers
+
+sadd commands ls
+sadd commands ps
+sadd commands top
+sadd commands vim
+sadd commands du
+sadd commands pwd
+sadd commands awk
+
+
+SUNION commands superpowers
+sinter commands superpowers
+
+
+
+ZADD hackers 1940 "Alan Kay"
+ZADD hackers 1953 "Richard Stallman"
+ZADD hackers 1965 "Yukihiro Matsumoto"
+ZADD hackers 1916 "Claude Shannon"
+ZADD hackers 1969 "Linus Torvalds"
+ZADD hackers 1912 "Alan Turing"
+
+ZRANGE hackers 2 4
+
+
+
+hset event name WeLovePHP
+hset event date 2013-04-13
+hset event duration 3
+hset event venue Softonic
+
+hgetall event
+
+hget event name
+
+
