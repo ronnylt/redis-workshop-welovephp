@@ -103,3 +103,8 @@ un usuario, conjuntamente con la cantidad de usuarios que lo han vistidado en lo
 __Tarea__: Implementar usando Lua script.
 
 
+# Optimizando conexiones con pipelines.
+
+__Tarea__: Analizar en los ejercicios anteriores, dónde pueden usarse pipeline para
+ optimizar las conexiones a Redis.
+
