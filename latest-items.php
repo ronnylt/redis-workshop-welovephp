@@ -1,19 +1,13 @@
 <?php
 
 require_once 'vendor/autoload.php';
+require_once 'config.php';
 
 use WeLovePhp\Items\ItemsManager;
 use Doctrine\DBAL\DriverManager;
 
 try {
     $config = new \Doctrine\DBAL\Configuration();
-    $connectionParams = array(
-        'dbname' => 'welovephp',
-        'user' => 'root',
-        'password' => 'ok123',
-        'host' => 'localhost',
-        'driver' => 'pdo_mysql',
-    );
     $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams, $config);
     $redis = new Predis\Client('tcp://127.0.0.1:6379');
 

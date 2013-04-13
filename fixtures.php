@@ -1,6 +1,7 @@
 <?php
 
 require_once 'vendor/autoload.php';
+require_once 'config.php';
 
 use Doctrine\DBAL\DriverManager;
 use WeLovePhp\Items\ItemsManager;
@@ -8,13 +9,6 @@ use WeLovePhp\Users\UsersManager;
 
 try {
     $config = new \Doctrine\DBAL\Configuration();
-    $connectionParams = array(
-        'dbname' => 'welovephp',
-        'user' => 'root',
-        'password' => 'ok123',
-        'host' => 'localhost',
-        'driver' => 'pdo_mysql',
-    );
     $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams, $config);
 
     $conn->executeQuery($conn->getDatabasePlatform()->getTruncateTableSQL('items'));
